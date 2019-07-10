@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>外部css,jsを使用する</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <p>
+    <form name="test">
+        <select name="linkselect" onChange="kakunin()">
+            <option value="">選択して下さい</option>
+            <option value="http://www.yahoo.co.jp/">Yahoo!Japan</option>
+            <option value="http://www.google.co.jp/">Google</option>
+        </select>
+    </form>
+    </p>
+
+  </body>
+</html>
